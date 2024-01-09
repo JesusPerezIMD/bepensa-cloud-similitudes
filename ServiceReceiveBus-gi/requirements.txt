@@ -1,0 +1,17 @@
+functions-framework==3.5.0
+google-cloud-pubsub
+azure-storage-blob
+pandas
+PyQt5
+keras==2.11.0
+opencv-python
+tensorflow
+matplotlib
+python-Levenshtein
+scikit-learn
+fuzzywuzzy
+scipy
+PyPDF2
+PyMuPDF
+Pillow
+aiohttp
