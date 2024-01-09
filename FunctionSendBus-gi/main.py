@@ -8,9 +8,9 @@ from azure.storage.blob import BlobServiceClient
 import requests
 
 # Functions for Blob Storage
-def upload_to_blob_storage(connection_string, container_name, task_id, blob_name, file):
+def upload_file_to_blob_storage(connection_string, container_name, blob_name, file):
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
-    blob_client = blob_service_client.get_blob_client(container_name, f"data/{task_id}/{blob_name}")
+    blob_client = blob_service_client.get_blob_client(container_name, f"tasks/{blob_name}")
     
     blob_client.upload_blob(file, overwrite=True)
 

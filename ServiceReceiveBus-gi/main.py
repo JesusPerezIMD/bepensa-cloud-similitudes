@@ -18,7 +18,6 @@ def main(project_id, subscription_id):
     subscription_path = subscriber.subscription_path(project_id, subscription_id)
 
     def callback(message):
-        print("Received message: {}".format(message))
         message_data = message.data.decode('utf-8')
         data = json.loads(message_data)
 
