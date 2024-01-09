@@ -25,6 +25,12 @@ class SimilitudTXTRequest:
     task_id: str
     data: List[SimilitudTXTDataRequest]
 
+def load_local_settings():
+    with open('../local.settings.json') as f:
+        data = json.load(f)
+    return data["Values"]
+local_settings = load_local_settings()
+
 def extract_data_from_xml(xml_content):
     data_list = []
     root = ET.fromstring(xml_content)
@@ -79,8 +85,8 @@ def process_xml_and_compute_similarity(task_id: str) -> dict:
         raise ValueError("Please provide both task_id")
 
     # Define your connection string and blob container name here
-    connection_string = os.environ["AzureWebJobsStorage"]
-    container_name = os.environ["GacetaContainerName"]
+    connection_string = local_settings["AzureWebJobsStorage"]
+    container_name = local_settings["GacetaContainerName"]
     blob_name = f"{task_id}.xml"
 
     # Download the PDF

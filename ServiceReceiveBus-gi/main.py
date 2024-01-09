@@ -24,7 +24,9 @@ def main(project_id, subscription_id):
 
         # Proceso del mensaje
         task_id = data.get('task_id', None)
+        print(f"Task ID: {task_id}")
         email = data.get('email', None)
+        print(f"Email: {email}")
         if task_id is None or email is None:
             logging.error("task_id or email is not found in the message")
             return
@@ -63,4 +65,4 @@ def main(project_id, subscription_id):
     except KeyboardInterrupt:
         future.cancel()
 
-main("my-project", "my-subscription")
+main("mindful-audio-410619", "my-subscription")
