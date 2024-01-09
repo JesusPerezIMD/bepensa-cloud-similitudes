@@ -43,7 +43,7 @@ def main(request):
     if file is None:
         return 'Please provide file data in the request form data.', 400
     
-    upload_to_blob_storage(storage_connection_string, container_name, task_id, blob_name, file.stream.read())
+    upload_file_to_blob_storage(storage_connection_string, container_name, task_id, blob_name, file.stream.read())
 
     project_id = "mindful-audio-410619"
     topic_id = "topic-example"
