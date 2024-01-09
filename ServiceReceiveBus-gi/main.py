@@ -33,6 +33,7 @@ def main(project_id, subscription_id):
         try:
             # Procesar el XML y calcular la similitud
             result = process_xml_and_compute_similarity(task_id)
+            print("process similarity successfully.")
             email_subject = "Notificación - Gaceta IMPI"
             email_body = f'Se realizó el cálculo de similitudes, para ver los resultados haga clic en el siguiente botón<br><br><a href="{local_settings["GacetaAppUrl"]}?uuid={task_id}" style="color: #fff; background-color: #008CBA;text-decoration: none; padding: 10px 15px; border-radius: 4px;">Ver Reporte</a><br><br><br>'
         except Exception as e:
@@ -53,6 +54,7 @@ def main(project_id, subscription_id):
         # Verificar la respuesta
         if response.status_code == 200:
             logging.info("Email sent successfully.")
+            print("Email sent successfully.")
         else:
             logging.error(f"Failed to send email. Status code: {response.status_code}. Response: {response.text}")
 
