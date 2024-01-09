@@ -27,7 +27,7 @@ def load_local_settings():
     return data["Values"]
 local_settings = load_local_settings()
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'C:/service-account-key.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '../service-account-key.json'
 
 def main(request):
     storage_connection_string = local_settings["AzureWebJobsStorage"]

@@ -11,6 +11,8 @@ def load_local_settings():
     return data["Values"]
 local_settings = load_local_settings()
 
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '../service-account-key.json'
+
 def main(project_id, subscription_id):
     subscriber = pubsub_v1.SubscriberClient()
     subscription_path = subscriber.subscription_path(project_id, subscription_id)

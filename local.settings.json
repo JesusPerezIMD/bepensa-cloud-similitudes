@@ -1,0 +1,12 @@
+{
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=bconnectstoragetest;AccountKey=bowyT1H6MWVRnUpdY021wA97NhiUHcOIzS9jeLJJRr0o8flpxaK5yC9G5pw8FtLj7GlVVxyndOJs+AStQc/CeQ==;EndpointSuffix=core.windows.net",
+    "GacetaStorageUrl": "https://bconnectstoragetest.blob.core.windows.net",
+    "GacetaContainerName": "gaceta-impi",
+    "GacetaAppUrl": "https://bepensa-gacetaimpi-app-test.azurewebsites.net/#/",
+    "BConnectApiUrl": "https://bconnectapitest.azurewebsites.net",
+    "ServiceBusConnection": "Endpoint=sb://bconnectbustest.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=oSNcxwG6SgOBbVIn6PS5pXHcJ/QnQDk6lkBakVm8vMw=",
+    "GacetaQueueName": "gaceta-impi"
+  }
+}

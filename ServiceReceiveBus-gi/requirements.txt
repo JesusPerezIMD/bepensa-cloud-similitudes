@@ -5,7 +5,7 @@ pandas
 PyQt5
 keras==2.11.0
 opencv-python
-tensorflow
+tensorflow==2.14.0
 matplotlib
 python-Levenshtein
 scikit-learn
